@@ -38,3 +38,48 @@ lightbox?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
 });
+
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = lightbox?.querySelector("img");
+const lightboxCaption = lightbox?.querySelector("p");
+const lightboxClose = lightbox?.querySelector(".lightbox-close");
+
+document.querySelectorAll(".project-card img").forEach((image) => {
+  image.closest(".project-card")?.addEventListener("click", () => {
+    if (!lightbox || !lightboxImage || !lightboxCaption) return;
+    lightboxImage.src = image.src;
+    lightboxImage.alt = image.alt;
+    lightboxCaption.textContent =
+      image.closest(".project-card")?.querySelector("h3")?.textContent || image.alt;
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  });
+});
+
+function closeLightbox() {
+  if (!lightbox) return;
+  lightbox.classList.remove("open");
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+lightboxClose?.addEventListener("click", closeLightbox);
+lightbox?.addEventListener("click", (event) => {
+  if (event.target === lightbox) closeLightbox();
+});
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeLightbox();
+});
