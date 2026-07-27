@@ -47,3 +47,47 @@ input,select,textarea{width:100%;padding:13px 14px;border:1px solid #cad3dc;font
   .office-map{width:min(100% - 28px,1180px)}
   .office-map iframe{height:300px}
 }
+
+/* Version 6 header branding */
+.site-header{
+  background:rgba(5,25,47,.97);
+  box-shadow:0 8px 28px rgba(0,0,0,.12);
+}
+.nav-wrap{height:86px}
+.brand{
+  display:flex;
+  align-items:center;
+  max-width:310px;
+  overflow:visible;
+}
+.brand img{
+  width:auto;
+  height:58px;
+  max-width:300px;
+  object-fit:contain;
+  display:block;
+}
+.site-nav{gap:24px}
+.site-nav a{letter-spacing:.01em}
+.nav-cta{
+  background:var(--gold);
+  color:var(--navy)!important;
+  border-color:var(--gold);
+}
+.nav-cta:hover{background:#ffd15b}
+.footer-branding img{
+  height:150px;
+  width:auto;
+  max-width:300px;
+  object-fit:contain;
+}
+@media(max-width:900px){
+  .brand img{height:52px;max-width:255px}
+}
+@media(max-width:600px){
+  .nav-wrap{height:72px}
+  .brand{max-width:220px}
+  .brand img{height:44px;max-width:210px}
+  .site-nav{top:72px}
+  .footer-branding img{height:120px}
+}
