@@ -14,12 +14,15 @@
 <body>
 <header class="site-header">
   <div class="container nav-wrap">
-    <a href="#top" class="brand"><img src="assets/images/myec-header-logo.png" alt="MYEC Inc."></a>
+    <a href="#top" class="brand" aria-label="MYEC Inc. home">
+      <img class="brand-icon" src="assets/images/myec-icon.png" alt="">
+      <span class="brand-text"><strong>MYEC Inc.</strong><small>Renovation &amp; Contracting</small></span>
+    </a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
     <nav class="site-nav">
       <a href="#about">About</a>
       <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
+      <a href="#projects">Our Work</a>
       <a href="#process">Process</a>
       <a href="tel:+13439993401" class="nav-cta">Call 343-999-3401</a>
     </nav>
@@ -27,7 +30,7 @@
 </header>
 
 <main id="top">
-  <section class="hero">
+  <section class="hero hero-kitchen">
     <div class="hero-shade"></div>
     <div class="container hero-content">
       <p class="eyebrow">Ottawa, Ontario</p>
@@ -37,6 +40,15 @@
         <a href="#contact" class="btn btn-gold">Request a Free Quote</a>
         <a href="#projects" class="btn btn-outline">View Projects</a>
       </div>
+    </div>
+  </section>
+
+  <section class="trust-strip" aria-label="MYEC Inc. service commitments">
+    <div class="container trust-grid">
+      <div><strong>Clear Scope</strong><span>Defined work and expectations</span></div>
+      <div><strong>Quality Focus</strong><span>Careful fit and finish</span></div>
+      <div><strong>Reliable Service</strong><span>Responsive project communication</span></div>
+      <div><strong>Ottawa Based</strong><span>Serving local communities</span></div>
     </div>
   </section>
 
@@ -164,6 +176,19 @@
     </div>
   </section>
 
+  <section class="section service-area">
+    <div class="container service-area-grid">
+      <div>
+        <p class="eyebrow dark">Service Area</p>
+        <h2>Serving Ottawa and surrounding communities</h2>
+      </div>
+      <div class="area-list" aria-label="Service areas">
+        <span>Ottawa</span><span>Nepean</span><span>Kanata</span><span>Orléans</span>
+        <span>Barrhaven</span><span>Gloucester</span><span>Stittsville</span><span>Manotick</span>
+      </div>
+    </div>
+  </section>
+
   <section id="contact" class="section contact">
     <div class="container contact-grid">
       <div>
@@ -244,7 +269,16 @@
   </div>
 </footer>
 
-<a class="floating-call" href="tel:+13439993401" aria-label="Call MYEC Inc.">Call Now</a>
+<div class="floating-actions">
+  <a class="floating-quote" href="#contact">Request Quote</a>
+  <a class="floating-call" href="tel:+13439993401" aria-label="Call MYEC Inc.">Call Now</a>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close image">×</button>
+  <img src="" alt="">
+  <p></p>
+</div>
 
 <script src="script.js"></script>
 </body>
