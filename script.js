@@ -1,0 +1,1 @@
+console.log('MYEC Inc website loaded');
