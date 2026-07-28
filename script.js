@@ -11,9 +11,7 @@ document.querySelectorAll('.site-nav a').forEach((a) => {
 });
 
 const year = document.getElementById('year');
-if (year) {
-  year.textContent = new Date().getFullYear();
-}
+if (year) year.textContent = new Date().getFullYear();
 
 const lightbox = document.getElementById('lightbox');
 const lightboxImage = lightbox?.querySelector('img');
@@ -22,9 +20,7 @@ const lightboxClose = lightbox?.querySelector('.lightbox-close');
 
 document.querySelectorAll('.project-card img').forEach((image) => {
   image.closest('.project-card')?.addEventListener('click', () => {
-    if (!lightbox || !lightboxImage || !lightboxCaption) {
-      return;
-    }
+    if (!lightbox || !lightboxImage || !lightboxCaption) return;
 
     lightboxImage.src = image.src;
     lightboxImage.alt = image.alt;
@@ -41,9 +37,7 @@ document.querySelectorAll('.project-card img').forEach((image) => {
 });
 
 function closeLightbox() {
-  if (!lightbox) {
-    return;
-  }
+  if (!lightbox) return;
 
   lightbox.classList.remove('open');
   lightbox.setAttribute('aria-hidden', 'true');
@@ -53,15 +47,11 @@ function closeLightbox() {
 lightboxClose?.addEventListener('click', closeLightbox);
 
 lightbox?.addEventListener('click', (event) => {
-  if (event.target === lightbox) {
-    closeLightbox();
-  }
+  if (event.target === lightbox) closeLightbox();
 });
 
 document.addEventListener('keydown', (event) => {
-  if (event.key === 'Escape') {
-    closeLightbox();
-  }
+  if (event.key === 'Escape') closeLightbox();
 });
 
 if ('IntersectionObserver' in window) {
@@ -77,11 +67,11 @@ if ('IntersectionObserver' in window) {
     { threshold: 0.12 }
   );
 
-  document.querySelectorAll('.reveal').forEach((element) => {
-    revealObserver.observe(element);
-  });
+  document
+    .querySelectorAll('.reveal')
+    .forEach((element) => revealObserver.observe(element));
 } else {
-  document.querySelectorAll('.reveal').forEach((element) => {
-    element.classList.add('visible');
-  });
+  document
+    .querySelectorAll('.reveal')
+    .forEach((element) => element.classList.add('visible'));
 }

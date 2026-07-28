@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://youssefmfmohamad.github.io/myecinc-website/sitemap.xml
+
+Sitemap: https://myecinc.ca/sitemap.xml
