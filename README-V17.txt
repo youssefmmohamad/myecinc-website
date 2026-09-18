@@ -24,3 +24,7 @@ Quote form:
 - Uses FormSubmit
 - Allows one optional image or PDF attachment
 - Redirects to https://myecinc.ca/thanks.html after submission
+
+V17.1 correction:
+- Removed engineering-related marketing language from the public website
+- Added cache-busting query strings to style.css and script.js so browsers load the new design immediately
