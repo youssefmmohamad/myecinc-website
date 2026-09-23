@@ -1,1 +1,9 @@
-Upload all HTML files, style.css, script.js and the assets folder into the existing website root. Replace matching files, retain all other files. Includes V18 photos, homepage gallery, gallery click fix and V19 About/Services redesign.
+MYEC website update 19.2
+
+Upload the extracted contents into the existing GitHub repository root. Keep assets/images intact and merge the folders. Replace matching files. Do not delete existing repository files or upload this ZIP itself. Commit the upload, wait for GitHub Pages, then refresh with Ctrl+Shift+R.
+
+This package contains the complete current website: 13 HTML pages, CSS, JavaScript, referenced images, favicon, CNAME, robots.txt and sitemap.xml.
+
+The homepage has unique hero, About, seven service and ten gallery photos. The Services page uses the same seven service photos and adds two distinct under-construction photos for framing and drywall preparation. The construction photos show a reasonably maintained active site with light sawdust, dust marks, small material traces and clear walking paths. The original 13 gallery photos are unchanged. Only the seven service photos are deliberately shared between Home and Services.
+
+The gallery click fix is included. All referenced local assets were checked and ZIP integrity verified. Browser rendering could not be run here, so review Services once uploaded.
