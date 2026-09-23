@@ -1,9 +1,1 @@
-MYEC renovation gallery update
-
-Merge the included files into the website repository root, preserving the assets/images directory structure, and commit to main. Do not delete unrelated repository files.
-
-Includes 13 optimized gallery images and updated homepage/gallery/navigation. Core drilling and floor heating are excluded. The previous-work claims are removed.
-
-Prepared against commit 5c30375661a13fee88e0d943939af92876218de2. Review against newer website edits before applying.
-
-Validation: 13 gallery cards and all local image references checked; git diff whitespace check passed. Browser visual verification was unavailable. No changes have been published.
+Extract and upload the HTML files, style.css, and assets folder to your existing website root. Replace matching files. Keep other existing files. This is an update package, not a standalone website.
