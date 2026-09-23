@@ -1,1 +1,1 @@
-Extract and upload the HTML files, style.css, and assets folder to your existing website root. Replace matching files. Keep other existing files. This is an update package, not a standalone website.
+Upload all HTML files, style.css, script.js and the assets folder into the existing website root. Replace matching files, retain all other files. Includes V18 photos, homepage gallery, gallery click fix and V19 About/Services redesign.
